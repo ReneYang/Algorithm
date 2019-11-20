@@ -16,4 +16,8 @@ public class Util {
         }
         System.out.println("-------------");
     }
+
+    static void println(String str){
+        System.out.println(str);
+    }
 }

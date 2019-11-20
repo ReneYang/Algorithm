@@ -33,9 +33,5 @@ public class SortChecker {
         }
     }
 
-    public static void stressTest(int[] originalArr, int[] sortArr, int validateTimes){
-        for(int i = 0; i<validateTimes;i++){
-            isValidate(originalArr, sortArr);
-        }
-    }
+
 }

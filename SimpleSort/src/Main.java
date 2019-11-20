@@ -1,3 +1,5 @@
+import com.sun.xml.internal.bind.v2.model.annotation.Quick;
+
 import java.util.Arrays;
 
 public class Main {
@@ -10,7 +12,7 @@ public class Main {
     }
 
     static void stressTest(){
-        for(int i=0;i < 1;i++) {
+        for(int i=0;i < 1000;i++) {
             int[] originalArr = SortChecker.generateArr();
             int[] sortArr = Arrays.copyOf(originalArr, originalArr.length);
 //            Util.print(sortArr);
@@ -21,8 +23,10 @@ public class Main {
 
 //            InsertionSort.sort(sortArr);
 //            ShellSort.sort(sortArr);
-            MergeSort.sort(sortArr);
-            SortChecker.stressTest(originalArr, sortArr, 10000000);
+//            MergeSort.sort(sortArr);
+
+            QuickSort.sort(sortArr);
+            SortChecker.isValidate(originalArr, sortArr);
 
 //            Util.print(sortArr);
         }
@@ -44,7 +48,9 @@ public class Main {
                 3307,
                 1567,
                 2938};
-        MergeSort.sort(arr);
+//        MergeSort.sort(arr);
+//        Util.print(arr);
+        QuickSort.sort(arr);
         Util.print(arr);
     }
 
