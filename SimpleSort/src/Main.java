@@ -7,8 +7,8 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello World!");
 
-//        simpleTest();
-        stressTest();
+        simpleTest();
+//        stressTest();
     }
 
     static void stressTest(){
@@ -38,19 +38,13 @@ public class Main {
 //        InsertionSort.sort(arr);
 //        ShellSort.sort(arr);
 
-        int[] arr = {2809,
-                162,
-                462,
-                7772,
-                2299,
-                9936,
-                2111,
-                3307,
-                1567,
-                2938};
+//        int[] arr = {2809, 162, 462, 7772, 2299, 9936, 2111, 3307, 1567, 2938};
 //        MergeSort.sort(arr);
 //        Util.print(arr);
-        QuickSort.sort(arr);
+//        QuickSort.sort(arr);
+
+        int[] arr = {0,1,4,2,3,5,6,9,1,5,7,9,3,6,9,8,1,2,5,8,0,0,4,6};
+        CountSort.sort(arr);
         Util.print(arr);
     }
 
