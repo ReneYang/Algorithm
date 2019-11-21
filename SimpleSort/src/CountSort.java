@@ -14,14 +14,22 @@ public class CountSort {
         for(int i=0; i<arr.length; i++){
             count[arr[i]]++;
         }
+        // 不稳定
+//        int j=0;
+//        for(int i = 0; i<count.length; i++){
+//            while(count[i]-- > 0 ){
+//                sort[j++] = i;
+//            }
+//        }
 
-        int j=0;
-        for(int i = 0; i<count.length; i++){
-            while(count[i]-- > 0 ){
-                sort[j++] = i;
-            }
+        // 稳定
+        for(int i = 1; i<count.length; i++){
+            count[i] = count[i]+count[i-1];
         }
 
+        for(int i = arr.length-1; i>=0; i--){
+            sort[--count[arr[i]]] = arr[i];
+        }
 
         for(int i=0; i<sort.length;i++){
             arr[i] = sort[i];
